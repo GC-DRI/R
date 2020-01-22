@@ -72,13 +72,24 @@ spotify <- read_csv(spotify_path)
     ##   lyrics = col_character()
     ## )
 
-If that doesn’t work, don’t sweat it\!
-
-You should see something like this printed to your console (fewer rows
-if you read in the small version). INSERT IMAGE OF CONSOLE HERE
+If that doesn’t work, don’t sweat it\! I can get you the data set at the
+break.
 
 When you run `read_csv()` it prints out a column specification that
-gives the name and type of each column.
+gives the name and data type of each column.
+
+-----
+
+If you were able to read in the data, take a moment to write the file to
+your `/data` folder for use later. The `readr` package has many handy
+utilities for writing files to your computer. Here, you’re inputting the
+object you wish to write to a file and the path you want to write it to.
+
+``` r
+write_csv(spotify, path = "/data/spotify.csv")
+```
+
+-----
 
 You can also supply an inline csv file. This is useful for experimenting
 with `readr` and for creating reproducible examples to share with
