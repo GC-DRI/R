@@ -86,7 +86,7 @@ utilities for writing files to your computer. Here, you’re inputting the
 object you wish to write to a file and the path you want to write it to.
 
 ``` r
-write_csv(spotify, path = "/data/spotify.csv")
+write_csv(spotify, path = "data/spotify.csv")
 ```
 
 -----

@@ -137,7 +137,7 @@ After a package is installed, you are ready to use its functionalities. If you j
 
 **Exercise 1**
 
-Do you remember how to see an overview of what functions and data are contained in a package? Try this with ```dplyr```.
+Do you remember how to see an overview of what functions and data are contained in a package? Try this with ```dplyr```. Hint: the `help()` function should help
 
 ----
 
@@ -158,7 +158,7 @@ library(dplyr)
 band_instruments
 ```
 
-Sometimes packages share function names with each other. For instance, both the dplyr and raster packages have a ```select()``` function. 
+Sometimes packages share function names with each other. For instance, both the `dplyr` and `raster` packages have a ```select()``` function. 
 So I don't confuse which package a function is being used from, I'll explicitly designate the package with ```dplyr::select()``` or ```raster::select()```. It's a good habit to get into, even if it requires more typing.
 
 There is also the ```require()``` function: it is indeed possible to load a package with this function, but the difference is that it will not throw an error if the package is not installed.
@@ -259,7 +259,7 @@ Beyond just giving credit where credit is due, citing the package gives readers 
 
 **Exercise 2**
 
-Another package in the ```tidyverse``` ecosystem is the ```tidyr``` package. We will explore this package in the Data Wrangling workshop. Let's take a quick glance to get a feel for it. 
+Another package in the ```tidyverse``` ecosystem is the ```tidyr``` package. We will explore this package in the Data Manipulation workshop. Let's take a quick glance to get a feel for it. 
 
 1) Read the DESCRIPTION file for ```tidyr``` to get an idea of what it contains.
 

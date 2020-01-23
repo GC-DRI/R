@@ -220,7 +220,8 @@ package. But first, an exercise.
 **Exercise 1**
 
 Do you remember how to see an overview of what functions and data are
-contained in a package? Try this with `dplyr`.
+contained in a package? Try this with `dplyr`. Hint: the `help()`
+function should help
 
 -----
 
@@ -265,7 +266,7 @@ band_instruments
     ## 3 Keith guitar
 
 Sometimes packages share function names with each other. For instance,
-both the dplyr and raster packages have a `select()` function. So I
+both the `dplyr` and `raster` packages have a `select()` function. So I
 don’t confuse which package a function is being used from, I’ll
 explicitly designate the package with `dplyr::select()` or
 `raster::select()`. It’s a good habit to get into, even if it requires
@@ -497,8 +498,8 @@ but some make certain assumptions under the hood that others do not.
 **Exercise 2**
 
 Another package in the `tidyverse` ecosystem is the `tidyr` package. We
-will explore this package in the Data Wrangling workshop. Let’s take a
-quick glance to get a feel for it.
+will explore this package in the Data Manipulation workshop. Let’s take
+a quick glance to get a feel for it.
 
 1)  Read the DESCRIPTION file for `tidyr` to get an idea of what it
     contains.

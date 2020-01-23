@@ -159,7 +159,8 @@ mind.
     the restaurants are in the western hemisphere. Access the
     *longitude* slot to double-check.
 
-3)  What are the data types of each slot?
+3)  What are the data types of each slot? (`typeof()` should help you
+    out)
 
 # Data frames
 
@@ -173,6 +174,40 @@ frames for statistical analysis and data visualization, so it’s
 important you become familiar with them\!
 
 ![dataframe](../images/dataframe.png)
+
+We will go more in-depth on how to manipulate data frames in the Data
+Manipulation workshop. For now, it is useful to know how to select
+columns. To do this, follow the form `dataframe$column`. Here is a
+simple data frame:
+
+``` r
+example_df <-
+  data.frame(numbers = c(1, 2, 3, 4, 5),
+             letters = c("a", "b", "c", "d", "e"))
+example_df
+```
+
+    ##   numbers letters
+    ## 1       1       a
+    ## 2       2       b
+    ## 3       3       c
+    ## 4       4       d
+    ## 5       5       e
+
+To access the letters column, use the `$` symbol.
+
+``` r
+example_df$letters
+```
+
+    ## [1] a b c d e
+    ## Levels: a b c d e
+
+**Exercise 2**
+
+Access the `numbers` column from the `example_df` data set.
+
+-----
 
 ## Tidy data
 
@@ -239,10 +274,12 @@ Three common problems seen in messy data sets are:
 
   - Variables are stored in both rows and columns.
 
-**Exercise 2**
+**Exercise 3**
 
 Which of the three common problems are seen in the **messy** data format
 of the mark-recapture experiment?
+
+-----
 
 Check out the
 [tidyr](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
@@ -254,10 +291,10 @@ nuance to the definition of tidy data than you’d think\!
 You may have noticed the above output contains a little section that
 looks like this: `# A tibble: 15 x 5`. Tibbles are data frames that cut
 out the extra fluff that the base R `data.frame` class adds to your data
-structure (Run `?data.frame` to see exactly what R does under the hood
-to your data). Tibbles also add a bit of useful information to your data
-frame output. Let’s take another look at the frog mark-recapture data
-set.
+structure (Run `?data.frame` if you’re curious to see exactly what R
+does under the hood to your data). Tibbles also add a bit of useful
+information to your data frame output. Let’s take another look at the
+frog mark-recapture data set.
 
     ## # A tibble: 15 x 5
     ##    frog_id   day plot_1 plot_2 plot_3
@@ -300,9 +337,7 @@ If you have too many variables to fit in the console, it will list the
 variable names and their data types under the printed table. This is
 convenient for very large data sets.
 
-You’ll learn how to make and manipulate tibbles in the Data Wrangling
-workshop tomorrow, but I wanted to introduce them to you today since
-you’ll be seeing them a lot.
+You’ll learn how to work with tibbles in the Data Manipulation workshop.
 
 # Nested data structures
 
@@ -426,6 +461,14 @@ typeof(restaurant_list$restaurant)
 ```
 
 **Exercise 2**
+
+``` r
+example_df$numbers
+```
+
+    ## [1] 1 2 3 4 5
+
+**Exercise 3**
 
 Multiple variables are stored in one column.
 

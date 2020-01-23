@@ -296,45 +296,6 @@ to use the `nchar()` function. Just eyeball the words.
 
 We will revisit subsetting in more detail in the next section.
 
-### Put it all together
-
-**Exercise 4**
-
-You’re interested in whether modern Western households stick to the
-“three meals a day” norm that has persisted since the middle ages.
-Work demands have increased and you think that people may be sherking a
-meal in favor of more work time. In a preliminary survey of your
-apartment complex, you surveyed four households and asked how many meals
-each member consumes on average each day.
-
-Complete the following to analyze your preliminary data.
-
-1)  Check your data vectors to make sure you are indeed working with
-    numeric data.
-
-<!-- end list -->
-
-``` r
-# hh = household
-hh_1 <- c(2, 3, 3)
-hh_2 <- c(3, 2, 2, 3)
-hh_3 <- c(2, 4)
-hh_4 <- c(3, 2)
-```
-
-2)  Take the average of each household using the `take_avg()` function
-    you created earlier. Assign each one to a unique object.
-
-3)  Create a new vector of your averages.
-
-4)  Visualize your new household averages using the `barplot()`
-    function. Just put your object from step 3) inside the function,
-    e.g. `barplot(hh_averages)`.
-
-5)  Since you’re interested in average across households, take the
-    average of your household averages. What does your preliminary
-    survey tell you?
-
 -----
 
 ## The guts of a function
@@ -573,7 +534,7 @@ all_avgs
 barplot(all_avgs)
 ```
 
-![](04-vectors_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](04-vectors_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 5)  
 <!-- end list -->
