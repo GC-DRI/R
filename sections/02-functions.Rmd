@@ -45,7 +45,7 @@ However, you often need to save output or *values* to *objects*. Storing values 
 For instance:
 
 ```{r}
-head_size <- 40
+head_size <- 20
 ```
 
 This statement can be interpreted as "40 **goes into** head_size". For historical reasons, you can also use ```=``` for assignments, but not in every context. Because ```=``` can throw unexpected results in some situations, it is good practice to always use ```<-``` for assignments.
