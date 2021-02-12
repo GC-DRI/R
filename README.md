@@ -9,7 +9,7 @@ software that interprets the scripts written using it.
 [RStudio](https://rstudio.com/) is currently a very popular way to not
 only write your R scripts but also to interact with the R software. To
 function correctly, RStudio needs R and therefore both need to be
-installed on your computer.
+installed on your computer. 
 
 ## Why R?
 
@@ -142,3 +142,5 @@ youtube](https://www.youtube.com/user/safe4democracy/videos)
 Carpentry](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html).
 <http://creativecommons.org/licenses/by/3.0/>. “Copyright (c) Data
 Carpentry”
+
+
