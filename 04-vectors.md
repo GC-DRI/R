@@ -325,7 +325,7 @@ function_name <- function(arg_1, arg_2, arg_3 = 2) {
 }
 ```
 
-`function_name` is the name of the funciton you’re creating. Name it
+`function_name` is the name of the function you’re creating. Name it
 something that is easy to remember but does not clash with existing
 functions in base R packages such as `mean()` or `sum()`. Although not
 all R functions do this, it is good practice to use verbs for function
@@ -352,7 +352,7 @@ Here you’re making your own version of the `mean()` function, called
 ``` r
 take_avg <- function(x){
   
-  # this function takes the same of all values in x. Assumes x is a numeric vector
+  # this function takes the sum of all values in x. Assumes x is a numeric vector
   s <- sum(x)
   
   # this counts the number of elements in x
