@@ -103,7 +103,7 @@ If you want to change an object's value, just assign it a new one. Your object's
 
 **Exercise 2**
 
-Create a new object called ```weight_kg``` and assign it the value **70**. Now, divide it by two and convert it to pounds, using the conversion factor **2.2**. Assign this new value to the object ```weight_lb```.
+Create a new object called ```weight_kg``` and assign it the value **70**. Now, convert it to pounds, using the conversion factor **2.2**. Assign this new value to the object ```weight_lb```.
 
 -----
 
@@ -261,14 +261,13 @@ I'll probably link to this book many times, but [R for Data Science](https://r4d
 Here is one method:
 ```{r}
 weight_kg <- 70
-weight_kg <- 70 / 2
 weight_lb <- weight_kg * 2.2
 ```
 
 Here's another:
 ```{r}
 weight_kg <- 70
-weight_lb <- (70 / 2) * 2.2
+weight_lb <- 70 * 2.2
 ```
 
 Note that I used parentheses around the first operation. You can use parantheses to specify the order you want operations to be performed. R follows the order of operations, so the parentheses aren't really necessary here, but they can be helpful to clarify your code or prevent mistakes.

@@ -1,8 +1,7 @@
 Objects and Functions
 ================
 
-[&lt;&lt;&lt; Previous](01-introduction.md) \| [Next
-&gt;&gt;&gt;](04-vectors.md)
+[\<\<\< Previous](01-introduction.md) | [Next \>\>\>](04-vectors.md)
 
 ## Creating objects
 
@@ -30,7 +29,7 @@ left.
 For instance:
 
 ``` r
-head_size <- 40
+head_size <- 20
 ```
 
 This statement can be interpreted as “40 **goes into** head\_size”. For
@@ -74,15 +73,15 @@ check for issues in the styling of your code.
 
 Which of the following object names is *invalid*?
 
-1.  site\_num
+1)  site\_num
 
-2.  R2
+2)  R2
 
-3.  1st\_try
+3)  1st\_try
 
-4.  fish.scale.size
+4)  fish.scale.size
 
-------------------------------------------------------------------------
+-----
 
 You might have noticed that assigning a value to an object doesn’t print
 anything. To print the value, you can either use parentheses around the
@@ -109,11 +108,11 @@ they’re critical for you to understand what you did when you have to
 read your code two months (*years*, *decades*) later. Clear comments
 should state what you are doing, define your objects, and clarify any
 non-standard code you may employ. Don’t assume that you’ll know what
-your code means down the line!
+your code means down the line\!
 
 ### Using objects
 
-Okay, now that `head_size` is in memory, you can do things with it!
+Okay, now that `head_size` is in memory, you can do things with it\!
 Let’s try some math.
 
 ``` r
@@ -124,7 +123,7 @@ head_size ** 2
     ## [1] 1600
 
 Quick question- what is the value of head size now? Why do you think
-that is? Don’t read ahead!
+that is? Don’t read ahead\!
 
 ### Modifying objects
 
@@ -132,7 +131,7 @@ If you want to change an object’s value, just assign it a new one. Your
 object’s value doesn’t change until a new assignment is made. R will not
 hesitate to overwrite the value, giving you no warnings when you are
 doing so. So, be careful and always double-check that the object doesn’t
-already exist or you are sure in your intent to overwrite!
+already exist or you are sure in your intent to overwrite\!
 
 ``` r
 # assign a new number
@@ -151,10 +150,10 @@ already exist or you are sure in your intent to overwrite!
 **Exercise 2**
 
 Create a new object called `weight_kg` and assign it the value **70**.
-Now, divide it by two and convert it to pounds, using the conversion
-factor **2.2**. Assign this new value to the object `weight_lb`.
+Now, convert it to pounds, using the conversion factor **2.2**. Assign
+this new value to the object `weight_lb`.
 
-------------------------------------------------------------------------
+-----
 
 ## Functions
 
@@ -223,7 +222,7 @@ whole number if you don’t supply the `digits` argument with a value.
 See what arguments are within the `sum()` function. One of them is `...`
 (ellipsis). Use Google to figure out what the `...` argument means.
 
-------------------------------------------------------------------------
+-----
 
 ### Matching arguments
 
@@ -278,7 +277,7 @@ know exactly how R is performing the calculations, or you are looking
 for inspiration for writing your own functions. Here is an example with
 the `cor()` function, which calculates correlations among variables. I
 restricted the output to only the first ten lines here- there is a lot
-of underlying code to calculate a correlation!
+of underlying code to calculate a correlation\!
 
 ``` r
 cor
@@ -397,7 +396,7 @@ Does this seem like a good solution to your problem? Why or why not?
 
 **Quick answer** Unfortunately this isn’t what you’re interested in.
 This user is seeking to only round up. The next google selection looks
-promising! Click on the “Rounding numbers to nearest 10 in R” link.
+promising\! Click on the “Rounding numbers to nearest 10 in R” link.
 
 The questions looks like this:
 
@@ -405,19 +404,19 @@ The questions looks like this:
 
 The user has a similar goal to you- they want to round to the 10s place.
 Note that they provide examples of what they would like to see and have
-stated what they have tried already!
+stated what they have tried already\!
 
 Now how to find the right answer? Fortunately, this question only has
 two answers to sift through. Usually the best answer is the answer
 accepted by the author (with the green checkmark), but sometimes the
 author doesn’t select a top answer or the community disagrees with the
 question author’s selection. It’s worth it to take a look at other
-highly upvoted answers so you don’t miss anything! In this case, we have
-a straightforward decision. The top answer is this:
+highly upvoted answers so you don’t miss anything\! In this case, we
+have a straightforward decision. The top answer is this:
 
 ![](../images/stackoverflow-topanswer.png)
 
-Well, this is embarrassing. The answer was in the help documentation!
+Well, this is embarrassing. The answer was in the help documentation\!
 Don’t feel embarrassed though. Be glad the answer was simple.
 
 Asking good questions and assessing quality answers is a skill that
@@ -427,7 +426,7 @@ post](https://stackoverflow.com/help/how-to-ask) for a short and sweet
 overview of how to ask good questions in forums like stackoverflow.
 Google has another [good blog
 post](https://webmasters.googleblog.com/2010/09/tips-for-getting-help-with-your-site.html)
-that should get you started asking good questions!
+that should get you started asking good questions\!
 
 ### More help resources
 
@@ -441,13 +440,13 @@ more](https://community.rstudio.com/)
 I’ll probably link to this book many times, but [R for Data
 Science](https://r4ds.had.co.nz/) is a great reference.
 
-------------------------------------------------------------------------
+-----
 
 ## Answers
 
 **Exercise 1**
 
-1.  1st\_try. Names can’t start with a number
+3)  1st\_try. Names can’t start with a number
 
 **Exercise 2**
 
@@ -455,7 +454,6 @@ Here is one method:
 
 ``` r
 weight_kg <- 70
-weight_kg <- 70 / 2
 weight_lb <- weight_kg * 2.2
 ```
 
@@ -463,7 +461,7 @@ Here’s another:
 
 ``` r
 weight_kg <- 70
-weight_lb <- (70 / 2) * 2.2
+weight_lb <- 70 * 2.2
 ```
 
 Note that I used parentheses around the first operation. You can use
@@ -486,12 +484,11 @@ post](https://www.r-bloggers.com/r-three-dots-ellipsis/): “…it means
 that the function is designed to take any number of named or unnamed
 arguments.”
 
-------------------------------------------------------------------------
+-----
 
-[&lt;&lt;&lt; Previous](01-introduction.md) \| [Next
-&gt;&gt;&gt;](04-vectors.md)
+[\<\<\< Previous](01-introduction.md) | [Next \>\>\>](04-vectors.md)
 
-------------------------------------------------------------------------
+-----
 
 Material modified from [R Studio
 Primers](https://rstudio.cloud/learn/primers) and [Data
