@@ -29,7 +29,7 @@ useful both for statistics but also data science.
   - Not just for statistics, but also general purpose programming.
   - For people who have experience in programmming: R is both an
     object-oriented and a so-called [functional
-    language](http://adv-r.had.co.nz/Functional-programming.html)
+    language](https://adv-r.hadley.nz/fp.html)
   - Large and growing community of peers.
   - You can use R as it is but combining it with the RStudio interface
     will help with organization and also provide us with extra options.
