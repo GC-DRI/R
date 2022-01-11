@@ -1,7 +1,7 @@
 Importing data
 ================
 
-[\<\<\< Previous](07-packages.md) | [Next \>\>\>]()
+[\<\<\< Previous](06-packages.md) | [Next \>\>\>](08-theory-to-practice)
 
 Unless you are generating your own data in R, you need to import it from
 another source. This can either be straightforward or can be a huge
@@ -363,8 +363,7 @@ read_csv2("a;b\n1;3")
     ## 1     1     3
 
 -----
-
-[\<\<\< Previous](07-packages.md) | [Next \>\>\>]()
+[\<\<\< Previous](06-packages.md) | [Next \>\>\>](08-theory-to-practice)
 
 -----
 
