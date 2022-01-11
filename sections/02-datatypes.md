@@ -3,6 +3,16 @@ Data types and Objects
 
 [\<\<\< Previous](01-introduction.md) | [Next \>\>\>](03-functions.md)
 
+-----
+
+> ## Learning Objectives
+> 
+>   - Describe the different data types in R and use `typeof()` function to identify data types.
+>   - Understand R objects and how to create them.
+>   - Learn about vectors in R
+
+-----
+
 # Data types
 
 Data type are classifications associated with specific data that let the computer know how to interpret the value and how a programmer intends to use a piece of data. We've already encoutered a data type, integers, in the previous section when we tried the expression `3 + 3`. Data types are common in many programming language, and each *data type* has its own unique properties. In R, certain functions can only take specific data types, and attempts at using a different data type can result in errors. 
