@@ -1,45 +1,145 @@
-Vectors and data types
+Functions
 ================
 
-[\<\<\< Previous](02-functions.md) | [Next \>\>\>](06-data-structure.md)
+[\<\<\< Previous](02-datatypes.md) | [Next \>\>\>](04-gettinghelp.md)
 
-# What is a vector?
+# Functions
 
-A vector is the most basic data structure in R and is foundational to
-coding in R. A vector is a series of values that all have the same *data
-type*. We will elaborate on data types later, but numbers and characters
-are two examples.
-
-A numeric vector looks like this
+We have been using a couple of different functions in the previous section such as `typeof()` and `length()`, and it's time to take a deeper look at what it is. When you want to make something happen in R, you can call a function. Most functions will produce results that you can see immediately, such
+as the `sqrt()` (square root) function in R. `sqrt()` is part of the base R package that comes with your installation of R.
 
 ``` r
-my_vector <- c(1, 2, 3, 4)
-
-#print the vector
-my_vector
+sqrt(16)
 ```
 
-    ## [1] 1 2 3 4
+    ## [1] 4
 
-A character vector looks like this
+You can think of functions as “canned scripts” that automate more
+complicated sets of commands. The structure of “calling” (or “running”
+or “executing”) a function is: `function(argument1, argument2, ...)`.
+Calling the function results in some sort of output. Functions can take
+one or a few inputs, or *arguments* (see below). The `sqrt()` function
+has one argument, which we supply the value **16** to. It outputs, or
+*returns*, a single numeric value.
+
+## Arguments
+
+The input you provide for your function are called arguments. Some
+functions take a single argument while others take multiple.
 
 ``` r
-char_vector <- c("I", "love", "to", "code", "in", "R.")
-
-char_vector
-```
-
-    ## [1] "I"    "love" "to"   "code" "in"   "R."
-
-Vectors are one-dimensional. Adding another dimension (e.g. a 2 x 2
-grid) makes it a *matrix*. Since they’re one-dimensional, you can count
-the number of elements in a vector with the `length()` function.
-
-``` r
-length(char_vector)
+#Example of a function that takes a single argument:
+factorial(3)
 ```
 
     ## [1] 6
+
+``` r
+#Example of a function that takes multiple arguments:
+paste("Hello", " World!", sep = "")
+```
+
+    ## [1] "Hello World!"
+
+### args()
+
+The `args()` function tells you what inputs, or *arguments* a function
+recognizes.
+
+``` r
+#For example:
+args(round)
+```
+
+    ## function (x, digits = 0) 
+    ## NULL
+
+From the output of `args(round)`, we know that this function takes 2
+arguments, `x` and `digits`. Looking at the help documentation (you’ll
+learn how to access that in a second), the `x` argument requires a
+number or a set of numbers that you wish to round. The `digits` argument
+requires a whole number that determines the number of decimal places you
+want to round to. The `= 0` part of `digits = 0` denotes a default
+value. In this instance, the `round()` function will round to the first
+whole number if you don’t supply the `digits` argument with a value.
+
+**Exercise 1**
+
+See what arguments are within the `sum()` function. One of them is `...`
+(ellipsis). Use Google to figure out what the `...` argument means.
+
+-----
+
+### Matching arguments
+
+You can also use the names of the arguments to specify the input. If you
+don’t use argument names, R will match your inputs based on the order
+that they are written.
+
+``` r
+log(100, 10) 
+```
+
+    ## [1] 2
+
+``` r
+#is different from 
+log(10, 100)
+```
+
+    ## [1] 0.5
+
+Specifying your input with the argument names can help avoid potential
+errors.
+
+``` r
+# both of these return the same value
+log(x = 100, base = 10)
+```
+
+    ## [1] 2
+
+``` r
+log(base = 10, x = 100)
+```
+
+    ## [1] 2
+
+### Default arguments
+
+Some arguments are optional, such as `base` in `log()`. In the case of
+an optional argument, you need not supply a value and the function will
+still run. In this case, the `base` argument has a default value of
+*exp(1)* and if you do not provide an alternative base value it will use
+its default value. However, the argument of `x` is not optional and
+requires an input or the function will not run.
+
+### Code body
+
+Typing the name of the function without the parentheses will return the
+code that is stored in the function. A couple examples of where this can
+be helpful are if you are performing a statistical test and you want to
+know exactly how R is performing the calculations, or you are looking
+for inspiration for writing your own functions. Here is an example with
+the `cor()` function, which calculates correlations among variables. I
+restricted the output to only the first ten lines here- there is a lot
+of underlying code to calculate a correlation\!
+
+``` r
+cor
+```
+
+    ## function (x, y = NULL, use = "everything", method = c("pearson", 
+    ##     "kendall", "spearman")) 
+    ## {
+    ##     na.method <- pmatch(use, c("all.obs", "complete.obs", "pairwise.complete.obs", 
+    ##         "everything", "na.or.complete"))
+    ##     if (is.na(na.method)) 
+    ##         stop("invalid 'use' argument")
+    ##     method <- match.arg(method)
+    ##     if (is.data.frame(y)) 
+    ##         y <- as.matrix(y)
+    ...
 
 ## c() function
 
@@ -85,7 +185,7 @@ Note that all elements in the vectors have to be of the same type; if
 they are different, this function will attempt to coerce them into the
 same elements.
 
-**Exercise 1**
+**Exercise 2**
 
 You have a vector of limb measurements from your favorite frog species.
 
@@ -113,46 +213,6 @@ by the body size. Do this so you can compare these measures with those
 you collect from other species.
 
 -----
-
-I keep referring to data types. What are they?
-
-## Data types
-
-R interprets the type of your vector based on the characteristics of its
-values.
-
-Each *data type* has its own unique properties.
-
-Here is a list of the different data types:
-
-  - `int` stands for integers, or whole numbers.
-
-  - `dbl` stands for doubles, or numbers with decimals.
-
-  - `chr` stands for character vectors, or strings.
-
-  - `dttm` stands for date-times (a date + a time).
-
-  - `lgl` stands for logical, vectors that contain only TRUE or FALSE.
-
-  - `fctr` stands for factors, which R uses to represent categorical
-    variables with fixed possible values.
-
-  - `date` stands for dates.
-
-## typeof()
-
-`typeof()` is a handy function that returns the data type of your
-vector. If you’re ever in doubt, check your vector with `typeof()`\!
-
-``` r
-dec <- c(3.24, 5.4, 2.04, 6.55)
-
-typeof(dec)
-```
-
-    ## [1] "double"
-
 ## Getting it right
 
 Vectors cannot contain more than one type of data. If you try, R will
@@ -230,7 +290,7 @@ pmax(vec, vec2)
 
     ## [1] 4 3 3 6 8
 
-**Exercise 2**
+**Exercise 3**
 
 You have two vectors that contain the words in a sentence.
 
@@ -280,7 +340,7 @@ z[c(1, 4, 5)]
 
 This extracts the first, fourth, and fifth elements in the `z` vector.
 
-**Exercise 3**
+**Exercise 4**
 
 Let’s take our favorite sentence (I’m reassigning it here for clarity)
 
@@ -382,7 +442,7 @@ Data Science](https://r4ds.had.co.nz/functions.html).
 
 ## Recap exercise
 
-**Exercise 4**
+**Exercise 5**
 
 You’re interested in whether modern Western households stick to the
 “three meals a day” norm that has persisted since the middle ages.
@@ -422,6 +482,20 @@ hh_4 <- c(3, 2)
 
 **Exercise 1**
 
+``` r
+args(sum)
+```
+
+    ## function (..., na.rm = FALSE) 
+    ## NULL
+
+From [this blog
+post](https://www.r-bloggers.com/r-three-dots-ellipsis/): “…it means
+that the function is designed to take any number of named or unnamed
+arguments.”
+
+**Exercise 2**
+
 R is a vectorized language. Just like with the addition you performed
 earlier, you can simply divide your body measurement vector by body size
 (which happens to be a vector with a single element).
@@ -435,7 +509,7 @@ limb_meas_corrected
     ##     humerus       femur tibiofibula 
     ##       0.250       0.500       0.625
 
-**Exercise 2**
+**Exercise 3**
 
 1)  
 <!-- end list -->
@@ -481,7 +555,7 @@ num_letters
 
     ## [1] 36
 
-**Exercise 3**
+**Exercise 4**
 
 ``` r
 big_words <- sentence_1[c(2, 4, 5)]
@@ -491,7 +565,7 @@ big_words
 
     ## [1] "want"   "pet"    "turtle"
 
-**Exercise 4**
+**Exercise 5**
 
 1)  
 <!-- end list -->
