@@ -1,8 +1,7 @@
 Packages
 ================
 
-[\<\<\< Previous](06-data-structure.md) | [Next
-\>\>\>](08-importing-data.md)
+[\<\<\< Previous](05-data-structure.md) | [Next\>\>\>](07-importing-data.md)
 
 R packages are collections of functions and data sets developed by the
 community. They increase the power of R by improving existing base R
@@ -568,8 +567,7 @@ browseVignettes(package = "tidyr")
 
 -----
 
-[\<\<\< Previous](06-data-structure.md) | [Next
-\>\>\>](08-importing-data.md)
+[\<\<\< Previous](05-data-structure.md) | [Next\>\>\>](07-importing-data.md)
 
 -----
 
