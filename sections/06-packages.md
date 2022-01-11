@@ -3,6 +3,17 @@ Packages
 
 [\<\<\< Previous](05-data-structure.md) | [Next\>\>\>](07-importing-data.md)
 
+-----
+
+> ## Learning Objectives
+> 
+>   - Introduce packages and repositories in R.
+>   - Understand how to install, update, and remove packages.
+>   - Exploring packages and their descriptions.
+>   - Introduce `tidyverse` package for data analysis.
+
+-----
+
 R packages are collections of functions and data sets developed by the
 community. They increase the power of R by improving existing base R
 functionalities, or by adding new ones.
