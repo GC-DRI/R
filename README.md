@@ -137,6 +137,13 @@ will meeting every other week to learn and work together on projects.
 youtube](https://www.youtube.com/user/safe4democracy/videos)
 
 -----
+## Contributing Authors
+
+Connor French
+Di Yoong
+Yuxiao Luo
+
+-----
 
 **Note**: This material is copied and modified from [Data
 Carpentry](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html).
