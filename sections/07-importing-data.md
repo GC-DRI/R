@@ -3,6 +3,15 @@ Importing data
 
 [\<\<\< Previous](06-packages.md) | [Next \>\>\>](08-theory-to-practice.md)
 
+-----
+
+> ## Learning Objectives
+> 
+>   - Learn how to read in and write to directory rectangular data (e.g. simple spreadsheet) through R command.
+>   - Learn how to read in data through the RStudio graphical user interface.
+
+-----
+
 Unless you are generating your own data in R, you need to import it from
 another source. This can either be straightforward or can be a huge
 headache, depending on the source and format. For this section, you’ll
