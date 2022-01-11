@@ -621,7 +621,7 @@ take_avg(all_avgs)
 
 -----
 
-[\<\<\< Previous](02-functions.md) | [Next \>\>\>](06-data-structure.md)
+[\<\<\< Previous](02-datatypes.md) | [Next \>\>\>](04-gettinghelp.md)
 
 -----
 
