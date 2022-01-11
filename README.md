@@ -139,9 +139,9 @@ youtube](https://www.youtube.com/user/safe4democracy/videos)
 -----
 ## Contributing Authors
 
-Connor French
-Di Yoong
-Yuxiao Luo
+Connor French   
+Di Yoong   
+Yuxiao Luo   
 
 -----
 
