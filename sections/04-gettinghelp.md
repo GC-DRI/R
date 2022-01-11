@@ -3,6 +3,15 @@ Getting help
 
 [\<\<\< Previous](03-functions.md) | [Next \>\>\>](05-data-structure.md)
 
+-----
+
+> ## Learning Objectives
+> 
+>   - Understand how to read packages and functions' documentation
+>   - Explore where and how to ask for help
+
+-----
+
 ## Getting help
 
 I don’t think I have ever had a coding session where I didn’t have to
