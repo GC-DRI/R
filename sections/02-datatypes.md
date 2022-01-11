@@ -242,6 +242,36 @@ length(char_vector)
 
     ## [1] 6
 -----
+## Getting it right
+
+Vectors cannot contain more than one type of data. If you try, R will
+coerce your vector to a single data type that you weren’t intending.
+
+``` r
+mix_vec <- c(1, "two", 3L)
+
+mix_vec
+```
+
+    ## [1] "1"   "two" "3"
+
+``` r
+typeof(mix_vec)
+```
+
+    ## [1] "character"
+
+**Quick exercise**
+
+Check the type of this vector:
+
+``` r
+mix_nums <- c(1L, 2L, 2.5, 3)
+```
+
+What type does it evaluate to?
+
+-----
 
 ## Answers
 
