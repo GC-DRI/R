@@ -1,7 +1,7 @@
 Introduction
 ================
 
-[\<\<\< Previous](../README.md) | [Next \>\>\>](02-functions.md)
+[\<\<\< Previous](../README.md) | [Next \>\>\>](02-datatypes.md)
 
 -----
 
@@ -195,7 +195,7 @@ things may break.
 
 -----
 
-[\<\<\< Previous](../README.md) | [Next \>\>\>](02-functions.md)  
+[\<\<\< Previous](../README.md) | [Next \>\>\>](02-datatypes.md)
 
 -----
 
