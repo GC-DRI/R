@@ -1,7 +1,7 @@
 Data structure
 ================
 
-[\<\<\< Previous](04-vectors.md) | [Next \>\>\>](07-packages.md)
+[\<\<\< Previous](04-gettinghelp.md) | [Next \>\>\>](06-packages.md)
 
 The primary data structures in R are vectors (which we’ve already
 introduced), lists, and data frames. Data frames are the *de facto* way
@@ -472,4 +472,4 @@ example_df$numbers
 
 Multiple variables are stored in one column.
 
-[\<\<\< Previous](04-vectors.md) | [Next \>\>\>](07-packages.md)
+[\<\<\< Previous](04-gettinghelp.md) | [Next \>\>\>](06-packages.md)
