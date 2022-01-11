@@ -3,6 +3,17 @@ Data structure
 
 [\<\<\< Previous](04-gettinghelp.md) | [Next \>\>\>](06-packages.md)
 
+-----
+
+> ## Learning Objectives
+> 
+>   - Introduction to different data structures in R.
+>   - Explore and create lists.
+>   - Understanding data frames.
+>   - Explore nested data structures.
+
+-----
+
 The primary data structures in R are vectors (which we’ve already
 introduced), lists, and data frames. Data frames are the *de facto* way
 to store tabular data, and are effectively a combination of vectors and
