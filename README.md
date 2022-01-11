@@ -1,6 +1,8 @@
 Introduction to R
 ================
 
+[Get Started \>\>\>](sections/01-introduction.md)
+
 ## What is R? What is RStudio?
 
 The term “R” is used to refer to both the programming language and the
