@@ -12,6 +12,7 @@ Functions
 >   - Create a simple function from scratch.
 
 -----
+
 # Functions
 
 We have been using a couple of different functions in the previous section such as `typeof()` and `length()`, and it's time to take a deeper look at what it is. When you want to make something happen in R, you can call a function. Most functions will produce results that you can see immediately, such
