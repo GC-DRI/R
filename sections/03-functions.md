@@ -3,6 +3,15 @@ Functions
 
 [\<\<\< Previous](02-datatypes.md) | [Next \>\>\>](04-gettinghelp.md)
 
+-----
+
+> ## Learning Objectives
+> 
+>   - Understanding how to use pre-defined functions and arguments in R.
+>   - Applying functions on vectors.
+>   - Create a simple function from scratch.
+
+-----
 # Functions
 
 We have been using a couple of different functions in the previous section such as `typeof()` and `length()`, and it's time to take a deeper look at what it is. When you want to make something happen in R, you can call a function. Most functions will produce results that you can see immediately, such
@@ -211,36 +220,6 @@ body_size <- 40
 The easiest way to correct for body size is to divide each measurement
 by the body size. Do this so you can compare these measures with those
 you collect from other species.
-
------
-## Getting it right
-
-Vectors cannot contain more than one type of data. If you try, R will
-coerce your vector to a single data type that you weren’t intending.
-
-``` r
-mix_vec <- c(1, "two", 3L)
-
-mix_vec
-```
-
-    ## [1] "1"   "two" "3"
-
-``` r
-typeof(mix_vec)
-```
-
-    ## [1] "character"
-
-**Quick exercise**
-
-Check the type of this vector:
-
-``` r
-mix_nums <- c(1L, 2L, 2.5, 3)
-```
-
-What type does it evaluate to?
 
 -----
 
