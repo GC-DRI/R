@@ -225,12 +225,12 @@ num_vector
 A character vector looks like this
 
 ``` r
-char_vector <- c("I", "love", "to", "code", "in", "R.")
+char_vector <- c("I", "love", "to", "code", "in", "R,", "YAY!")
 
 char_vector
 ```
 
-    ## [1] "I"    "love" "to"   "code" "in"   "R."
+    ## [1] "I"    "love" "to"   "code" "in"   "R," "YAY!"
 
 Vectors are one-dimensional. Adding another dimension (e.g. a 2 x 2
 grid) makes it a *matrix*. Since they’re one-dimensional, you can count
@@ -302,6 +302,20 @@ num_vector[1:5]
     
 This extracts the first to fifth elements from the `num_vector` vector.
 
+**Exercise 3**
+
+Let’s take our favorite sentence (I’m reassigning it here for clarity)
+
+``` r
+char_vector <- c("I", "love", "to", "code", "in", "R,", "YAY!")
+```
+
+Create a new object that contains all of the words that contain more
+than one letter. Note- use numerical indexing to do this. You don’t need
+to use the `nchar()` function. Just eyeball the words.     
+
+-----
+
 What happens when I want to know what's in my vector from the 6th element to the end of the vector or list? This is a little trickier in R, as it would require you to know either how many elements there are and slice to the end (e.g. `num_vector[6:9]`) or to do a slice with an exclusion. To do an exclusion, you will insert a `-` sign in front of the element or slice you want to exclude.
 
 ```r
@@ -351,9 +365,31 @@ Note that I used parentheses around the first operation. You can use
 parantheses to specify the order you want operations to be performed. R
 follows the order of operations, so the parentheses aren’t really
 necessary here, but they can be helpful to clarify your code or prevent
-mistakes.
+mistakes.  
 
+**Exercise 3**
+
+``` r
+big_words <- char_vector[c(2,3,4,5,7)]
+
+big_words
+```
+
+    ## [1] "love" "to"   "code" "in"   "YAY!"
+    
+Here’s another:
+
+``` r
+big_words <- char_vector[c(2:5,7)]
+
+big_words
+```
+
+    ## [1] "love" "to"   "code" "in"   "YAY!"
+    
+    
 **Bonus Challenge**
+
 ```r
 head(char_vector, 3)
 ```
