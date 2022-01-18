@@ -214,13 +214,13 @@ type*.
 A numeric vector looks like this
 
 ``` r
-my_vector <- c(1, 2, 3, 4)
+num_vector <- c(44, 6, 323, 4, 6462, 2455, 875, 24, 5993)
 
 #print the vector
-my_vector
+num_vector
 ```
 
-    ## [1] 1 2 3 4
+    ## [1]   44    6  323    4    6462 2455  875   24 5993
 
 A character vector looks like this
 
@@ -237,10 +237,10 @@ grid) makes it a *matrix*. Since they’re one-dimensional, you can count
 the number of elements in a vector with the `length()` function.
 
 ``` r
-length(char_vector)
+length(num_vector)
 ```
 
-    ## [1] 6
+    ## [1] 9
 -----
 ## Getting it right
 
@@ -272,6 +272,57 @@ mix_nums <- c(1L, 2L, 2.5, 3)
 What type does it evaluate to?
 
 -----
+## Subsetting vectors
+
+R begins indexing from 1. This means that the first position of an element in a vector is represented by the index 1. This is a little different from other programming languages like python, which begins its indexing with 0. 
+
+Knowing how R indexes is useful when you are trying to find the value of specific elements in a vector or list. For example, if I wanted to know what was the 5th element in `num_vector`, I could call on it by specifying its indexed position. Square brackets [] with one or more indices inside allow you to do this.
+
+```r
+num_vector[5]
+```
+    ## [1] 6462
+    
+This is telling R to look for the 5th element in the vector `num_vector` and to return that result, which in this case is 6462.
+
+You can also use multiple indices to retrieve more than one element using the c() function within [].
+```r
+num_vector[c(1, 4, 5)]
+```
+    ## [1]   44    4    6462
+    
+This extracts the first, fourth, and fifth elements in the `num_vector` vector.    
+
+You can also slice specific parts of your vector. If you have a very long vector and you just want to know what the first 3 elements are, you can indicate the range by using the `:`. For example, if I wanted the first five element of my vector, I would do `num_vector[1:5]`. This tells R to take the first to fifth indexed elements and return that result.
+
+```r
+num_vector[1:5]
+```
+    ## [1]   44    6  323    4   6462
+    
+This extracts the first to fifth elements from the `num_vector` vector.
+
+What happens when I want to know what's in my vector from the 6th element to the end of the vector or list? This is a little trickier in R, as it would require you to know either how many elements there are and slice to the end (e.g. `num_vector[6:9]`) or to do a slice with an exclusion. To do an exclusion, you will insert a `-` sign in front of the element or slice you want to exclude.
+
+```r
+num_vector[-(1:5)]
+```
+    ## [1] 2455  875   24 5993
+    
+Here, R is looking through my vector `num_vector`, and excluding the first to fifth positioned elements, and return the results for the remaining elements in this vector. 
+
+You can achieve the same slice by using the `tail()` function. With the default settings (arguments), it will return the last 6 elements. You can also specify from where you want R to begin slicing by indicating how many positions from the end of the vector do you want R to include in its output. 
+
+```r
+tail(num_vector, 3)
+```
+    ## [1]  875   24 5993
+    
+This tells R to return look from the 3rd to last element in the vector `num_vector` and to return that result.
+
+Bonus challenge: You might have guessed it, but there is also a `head()` function! Can you figure out how to get the first 3 items on `char_vector` using the head() function? (Hint: it's works similar to the `tail()` function)
+
+-----
 
 ## Answers
 
@@ -284,15 +335,16 @@ What type does it evaluate to?
 Here is one method:
 
 ``` r
-weight_kg <- 70
-weight_lb <- weight_kg * 2.2
+weight_lb <- 170
+weight_kg <- (weight_lb / 2.2)
+weight_kg
 ```
 
 Here’s another:
 
 ``` r
-weight_kg <- 70
-weight_lb <- 70 * 2.2
+weight_lb <- 170
+(weight_kg <- 170 / 2.2)
 ```
 
 Note that I used parentheses around the first operation. You can use
@@ -301,9 +353,13 @@ follows the order of operations, so the parentheses aren’t really
 necessary here, but they can be helpful to clarify your code or prevent
 mistakes.
 
+**Bonus Challenge**
+```r
+head(char_vector, 3)
+
 -----
 
-[\<\<\< Previous](01-introduction.md) | [Next \>\>\>](04-vectors.md)
+[\<\<\< Previous](01-introduction.md) | [Next \>\>\>](03-functions.md)
 
 -----
 
