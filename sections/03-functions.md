@@ -292,52 +292,6 @@ sentence_2 <- c("It", "will", "be", "green", "and", "brown")
 
 -----
 
-## Subsetting vectors
-
-What do you do if you wanted to extract a specific element or elements
-in a vector? Square brackets `[]` with one or more indices inside allow
-you to do this.
-
-``` r
-z <- c(10, 11, 12, 13, 14, 15)
-
-z[3] 
-```
-
-    ## [1] 12
-
-This is telling R to look for the 3rd element in the vector z and to
-return that result, which in this case is the number 12.
-
-You can also use multiple indices to retrieve more than one element
-using the `c()` function within `[]`.
-
-``` r
-z[c(1, 4, 5)]
-```
-
-    ## [1] 10 13 14
-
-This extracts the first, fourth, and fifth elements in the `z` vector.
-
-**Exercise 4**
-
-Let’s take our favorite sentence (I’m reassigning it here for clarity)
-
-``` r
-sentence_1 <- c("I", "want", "a", "pet", "turtle")
-```
-
-Create a new object that contains all of the words that contain more
-than one letter. Note- use numerical indexing to do this. You don’t need
-to use the `nchar()` function. Just eyeball the words.
-
------
-
-We will revisit subsetting in more detail in the next section.
-
------
-
 ## The guts of a function
 
 Now that we have gone over some of the basic components in a piece of R
@@ -422,7 +376,7 @@ Data Science](https://r4ds.had.co.nz/functions.html).
 
 ## Recap exercise
 
-**Exercise 5**
+**Exercise 4**
 
 You’re interested in whether modern Western households stick to the
 “three meals a day” norm that has persisted since the middle ages.
@@ -535,17 +489,8 @@ num_letters
 
     ## [1] 36
 
+
 **Exercise 4**
-
-``` r
-big_words <- sentence_1[c(2, 4, 5)]
-
-big_words
-```
-
-    ## [1] "want"   "pet"    "turtle"
-
-**Exercise 5**
 
 1)  
 <!-- end list -->
