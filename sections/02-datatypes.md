@@ -356,6 +356,7 @@ mistakes.
 **Bonus Challenge**
 ```r
 head(char_vector, 3)
+```
 
 -----
 
