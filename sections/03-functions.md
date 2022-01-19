@@ -275,20 +275,18 @@ pmax(vec, vec2)
 You have two vectors that contain the words in a sentence.
 
 ``` r
-sentence_1 <- c("I", "want", "a", "pet", "turtle")
+sentence_1 <- c("I", "want", "a", "pet", "turtle.")
 
-sentence_2 <- c("It", "will", "be", "green", "and", "brown")
+sentence_2 <- c("It", "will", "be", "green", "and", "brown!")
 ```
 
-1)  Count the number of words in each sentence.
+1)  Count the number of words in each sentence. Hint: each sentence is a vector. How can we find the length of a vector?
 
 2)  Concatenate the two vectors and assign them to a new object (for
-    simplicity, call it `sentences`).
+    simplicity, call it `sentences`). Hint: concatenate can be understood as combine in this case
 
 3)  Now for a tricky task. Count the number of letters in the combined
-    sentences. Some hints: Use the `nchar()` function to count the
-    number of letters in each word. You will need to assign an
-    intermediate variable.
+    sentences. Hint: The nchar() function counts the number of letters in each word. You will then need a function to find the sum of each word in sentences. You will probably need to assign an intermediate variable.
 
 -----
 
